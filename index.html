@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç Kayıt Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Araç Kayıt Formu</h1>
+    <form id="aracKayitFormu">
+        <!-- Form alanları -->
+        <div class="form-group">
+            <label for="kesifTarihi">Keşif Tarihi:</label>
+            <input type="date" id="kesifTarihi" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dosyaNo">Dosya No:</label>
+            <input type="text" id="dosyaNo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="plaka">Plaka:</label>
+            <input type="text" id="plaka" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sasiNo">Şasi No:</label>
+            <input type="text" id="sasiNo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="motorNo">Motor No:</label>
+            <input type="text" id="motorNo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="otoparkGirisTarihi">Otopark Giriş Tarihi:</label>
+            <input type="date" id="otoparkGirisTarihi" required>
+        </div>
+
+        <h2>Araç Durumu</h2>
+        <div class="arac-durum">
+            <h3>Araç Durumu</h3>
+            <div class="parca">
+                <label>Sol Ön Cam:</label>
+                <input type="checkbox" id="solOnCamEzik"> Ezik
+                <input type="checkbox" id="solOnCamCizik"> Çizik
+                <input type="checkbox" id="solOnCamBoya"> Boya
+                <input type="checkbox" id="solOnCamKirik"> Kırık
+                <input type="checkbox" id="solOnCamEksik"> Eksik
+                <input type="checkbox" id="solOnCamYok"> Yok
+            </div>
+
+            <!-- Sağ Ön Cam -->
+            <div class="parca">
+                <label>Sağ Ön Cam:</label>
+                <input type="checkbox" id="sagOnCamEzik"> Ezik
+                <input type="checkbox" id="sagOnCamCizik"> Çizik
+                <input type="checkbox" id="sagOnCamBoya"> Boya
+                <input type="checkbox" id="sagOnCamKirik"> Kırık
+                <input type="checkbox" id="sagOnCamEksik"> Eksik
+                <input type="checkbox" id="sagOnCamYok"> Yok
+            </div>
+
+            <!-- Sol Arka Cam -->
+            <div class="parca">
+                <label>Sol Arka Cam:</label>
+                <input type="checkbox" id="solArkaCamEzik"> Ezik
+                <input type="checkbox" id="solArkaCamCizik"> Çizik
+                <input type="checkbox" id="solArkaCamBoya"> Boya
+                <input type="checkbox" id="solArkaCamKirik"> Kırık
+                <input type="checkbox" id="solArkaCamEksik"> Eksik
+                <input type="checkbox" id="solArkaCamYok"> Yok
+            </div>
+
+            <!-- Sağ Arka Cam -->
+            <div class="parca">
+                <label>Sağ Arka Cam:</label>
+                <input type="checkbox" id="sagArkaCamEzik"> Ezik
+                <input type="checkbox" id="sagArkaCamCizik"> Çizik
+                <input type="checkbox" id="sagArkaCamBoya"> Boya
+                <input type="checkbox" id="sagArkaCamKirik"> Kırık
+                <input type="checkbox" id="sagArkaCamEksik"> Eksik
+                <input type="checkbox" id="sagArkaCamYok"> Yok
+            </div>
+
+            <!-- Kaput -->
+            <div class="parca">
+                <label>Kaput:</label>
+                <input type="checkbox" id="kaputEzik"> Ezik
+                <input type="checkbox" id="kaputCizik"> Çizik
+                <input type="checkbox" id="kaputBoya"> Boya
+                <input type="checkbox" id="kaputKirik"> Kırık
+                <input type="checkbox" id="kaputEksik"> Eksik
+                <input type="checkbox" id="kaputYok"> Yok
+            </div>
+
+            <!-- Tavan -->
+            <div class="parca">
+                <label>Tavan:</label>
+                <input type="checkbox" id="tavanEzik"> Ezik
+                <input type="checkbox" id="tavanCizik"> Çizik
+                <input type="checkbox" id="tavanBoya"> Boya
+                <input type="checkbox" id="tavanKirik"> Kırık
+                <input type="checkbox" id="tavanEksik"> Eksik
+                <input type="checkbox" id="tavanYok"> Yok
+            </div>
+
+            <!-- Sol Ön Kapı -->
+            <div class="parca">
+                <label>Sol Ön Kapı:</label>
+                <input type="checkbox" id="solOnKapiEzik"> Ezik
+                <input type="checkbox" id="solOnKapiCizik"> Çizik
+                <input type="checkbox" id="solOnKapiBoya"> Boya
+                <input type="checkbox" id="solOnKapiKirik"> Kırık
+                <input type="checkbox" id="solOnKapiEksik"> Eksik
+                <input type="checkbox" id="solOnKapiYok"> Yok
+            </div>
+
+            <!-- Sağ Ön Kapı -->
+            <div class="parca">
+                <label>Sağ Ön Kapı:</label>
+                <input type="checkbox" id="sagOnKapiEzik"> Ezik
+                <input type="checkbox" id="sagOnKapiCizik"> Çizik
+                <input type="checkbox" id="sagOnKapiBoya"> Boya
+                <input type="checkbox" id="sagOnKapiKirik"> Kırık
+                <input type="checkbox" id="sagOnKapiEksik"> Eksik
+                <input type="checkbox" id="sagOnKapiYok"> Yok
+            </div>
+
+            <!-- Sol Arka Kapı -->
+            <div class="parca">
+                <label>Sol Arka Kapı:</label>
+                <input type="checkbox" id="solArkaKapiEzik"> Ezik
+                <input type="checkbox" id="solArkaKapiCizik"> Çizik
+                <input type="checkbox" id="solArkaKapiBoya"> Boya
+                <input type="checkbox" id="solArkaKapiKirik"> Kırık
+                <input type="checkbox" id="solArkaKapiEksik"> Eksik
+                <input type="checkbox" id="solArkaKapiYok"> Yok
+            </div>
+
+            <!-- Sağ Arka Kapı -->
+            <div class="parca">
+                <label>Sağ Arka Kapı:</label>
+                <input type="checkbox" id="sagArkaKapiEzik"> Ezik
+                <input type="checkbox" id="sagArkaKapiCizik"> Çizik
+                <input type="checkbox" id="sagArkaKapiBoya"> Boya
+                <input type="checkbox" id="sagArkaKapiKirik"> Kırık
+                <input type="checkbox" id="sagArkaKapiEksik"> Eksik
+                <input type="checkbox" id="sagArkaKapiYok"> Yok
+            </div>
+
+            <!-- Bagaj Kapağı -->
+            <div class="parca">
+                <label>Bagaj Kapağı:</label>
+                <input type="checkbox" id="bagajKapagiEzik"> Ezik
+                <input type="checkbox" id="bagajKapagiCizik"> Çizik
+                <input type="checkbox" id="bagajKapagiBoya"> Boya
+                <input type="checkbox" id="bagajKapagiKirik"> Kırık
+                <input type="checkbox" id="bagajKapagiEksik"> Eksik
+                <input type="checkbox" id="bagajKapagiYok"> Yok
+            </div>
+
+            <!-- Tekerlekler -->
+            <div class="parca">
+                <label>Tekerlekler:</label>
+                <input type="checkbox" id="tekerleklerEzik"> Ezik
+                <input type="checkbox" id="tekerleklerCizik"> Çizik
+                <input type="checkbox" id="tekerleklerBoya"> Boya
+                <input type="checkbox" id="tekerleklerKirik"> Kırık
+                <input type="checkbox" id="tekerleklerEksik"> Eksik
+                <input type="checkbox" id="tekerleklerYok"> Yok
+            </div>
+            <button type="submit">Kaydet</button>
+        </div>
+    </form>
+
+    <h2>Kaydedilen Araçlar</h2>
+    <ul id="kaydedilenAraclar"></ul>
+
+    <script>
+        const aracKayitFormu = document.getElementById('aracKayitFormu');
+        const kaydedilenAraclarListesi = document.getElementById('kaydedilenAraclar');
+
+        let kaydedilenAraclar = [];
+
+        // Formu gönderdiğinde çalışacak
+        aracKayitFormu.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Form bilgilerini al
+            const kesifTarihi = document.getElementById('kesifTarihi').value;
+            const dosyaNo = document.getElementById('dosyaNo').value;
+            const plaka = document.getElementById('plaka').value;
+            const sasiNo = document.getElementById('sasiNo').value;
+            const motorNo = document.getElementById('motorNo').value;
+            const otoparkGirisTarihi = document.getElementById('otoparkGirisTarihi').value;
+
+            // Araç durumunu al
+            // Araç durumunu al
+const solOnCamDurumu = getParcaDurumu('solOnCam');
+const sagOnCamDurumu = getParcaDurumu('sagOnCam');
+const solArkaCamDurumu = getParcaDurumu('solArkaCam');
+const sagArkaCamDurumu = getParcaDurumu('sagArkaCam');
+const kaputDurumu = getParcaDurumu('kaput');
+const tavanDurumu = getParcaDurumu('tavan');
+const solOnKapiDurumu = getParcaDurumu('solOnKapi');
+const sagOnKapiDurumu = getParcaDurumu('sagOnKapi');
+const solArkaKapiDurumu = getParcaDurumu('solArkaKapi');
+const sagArkaKapiDurumu = getParcaDurumu('sagArkaKapi');
+const bagajKapagiDurumu = getParcaDurumu('bagajKapagi');
+const tekerleklerDurumu = getParcaDurumu('tekerlekler');
+
+            // Aracı kaydet
+            const yeniArac = {
+                kesifTarihi,
+                dosyaNo,
+                plaka,
+                sasiNo,
+                motorNo,
+                otoparkGirisTarihi,
+                durumlar: {
+                    solOnCamDurumu,
+                    sagOnCamDurumu,
+                    solArkaCamDurumu,
+                    sagArkaCamDurumu,
+                    kaputDurumu,
+                    tavanDurumu,
+                    solOnKapiDurumu,
+                    sagOnKapiDurumu,
+                    solArkaKapiDurumu,
+                    sagArkaKapiDurumu,
+                    bagajKapagiDurumu,
+                    tekerleklerDurumu,
+                }
+            };
+
+            kaydedilenAraclar.push(yeniArac);
+            formuTemizle();
+            kaydedilenAraclariGoster();
+        });
+
+        // Belirli bir parça için durumları döndüren fonksiyon
+        function getParcaDurumu(parcaId) {
+            const durumlar = [];
+            if (document.getElementById(`${parcaId}Ezik`).checked) durumlar.push('Ezik');
+            if (document.getElementById(`${parcaId}Cizik`).checked) durumlar.push('Çizik');
+            if (document.getElementById(`${parcaId}Boya`).checked) durumlar.push('Boya');
+            if (document.getElementById(`${parcaId}Kirik`).checked) durumlar.push('Kırık');
+            if (document.getElementById(`${parcaId}Eksik`).checked) durumlar.push('Eksik');
+            if (document.getElementById(`${parcaId}Yok`).checked) durumlar.push('Yok');
+            return durumlar.join(', ');
+        }
+
+        // Kaydedilen araçları gösterme fonksiyonu
+        function kaydedilenAraclariGoster() {
+            kaydedilenAraclarListesi.innerHTML = '';
+
+            kaydedilenAraclar.forEach((arac, index) => {
+                const aracItem = document.createElement('li');
+                aracItem.innerHTML = `
+                    Araç: ${arac.plaka} - ${arac.dosyaNo}
+                    <button onclick="aracDetayiniGoster(${index})">Detay</button>
+                    <button onclick="araciSil(${index})">Sil</button>
+                    <div id="aracDetay${index}" style="display: none;">
+                        <p>Keşif Tarihi: ${arac.kesifTarihi}</p>
+                        <p>Şasi No: ${arac.sasiNo}</p>
+                        <p>Motor No: ${arac.motorNo}</p>
+                        <p>Otopark Giriş Tarihi: ${arac.otoparkGirisTarihi}</p>
+                        <p>Sol Ön Cam Durumu: ${arac.durumlar.solOnCamDurumu}</p>
+                        <p>Sağ Ön Cam Durumu: ${arac.durumlar.sagOnCamDurumu}</p>
+                        <p>Sol Arka Cam Durumu: ${arac.durumlar.solArkaCamDurumu}</p>
+                        <p>Sağ Arka Cam Durumu: ${arac.durumlar.sagArkaCamDurumu}</p>                   
+                        <p>Kaput Durumu: ${arac.durumlar.kaputDurumu}</p>
+                        <p>Tavan Durumu: ${arac.durumlar.tavanDurumu}</p>
+                        <p>Sol Ön Kapı Durumu: ${arac.durumlar.solOnKapiDurumu}</p>
+                        <p>Sağ Ön Kapı Durumu: ${arac.durumlar.sagOnKapiDurumu}</p>
+                        <p>Sol Arka Kapı Durumu: ${arac.durumlar.solArkaKapiDurumu}</p>                   
+                        <p>Sağ Arka Kapı Durumu: ${arac.durumlar.sagArkaKapiDurumu}</p>
+                        <p>Bagaj Kapağ Durumu: ${arac.durumlar.bagajKapagiDurumu}</p>
+                        <p>Tekerlekler Durumu: ${arac.durumlar.tekerleklerDurumu}</p>
+
+
+
+
+                    </div>
+                `;
+                kaydedilenAraclarListesi.appendChild(aracItem);
+            });
+        }
+
+        // Araç detayını göster/gizle
+        function aracDetayiniGoster(index) {
+            const detayDiv = document.getElementById(`aracDetay${index}`);
+            if (detayDiv.style.display === 'none') {
+                detayDiv.style.display = 'block';
+            } else {
+                detayDiv.style.display = 'none';
+            }
+        }
+
+        // Araç silme fonksiyonu
+        function araciSil(index) {
+            kaydedilenAraclar.splice(index, 1);
+            kaydedilenAraclariGoster();
+        }
+
+        // Formu temizle
+        function formuTemizle() {
+            aracKayitFormu.reset();
+        }
+    </script>
+</body>
+</html>
