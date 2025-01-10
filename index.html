@@ -9,7 +9,6 @@
 <body>
     <h1>Araç Kayıt Formu</h1>
     <form id="aracKayitFormu">
-        <!-- Form alanları -->
         <div class="form-group">
             <label for="kesifTarihi">Keşif Tarihi:</label>
             <input type="date" id="kesifTarihi" required>
@@ -53,7 +52,6 @@
                 <input type="checkbox" id="solOnCamYok"> Yok
             </div>
 
-            <!-- Sağ Ön Cam -->
             <div class="parca">
                 <label>Sağ Ön Cam:</label>
                 <input type="checkbox" id="sagOnCamEzik"> Ezik
@@ -64,7 +62,6 @@
                 <input type="checkbox" id="sagOnCamYok"> Yok
             </div>
 
-            <!-- Sol Arka Cam -->
             <div class="parca">
                 <label>Sol Arka Cam:</label>
                 <input type="checkbox" id="solArkaCamEzik"> Ezik
@@ -75,7 +72,6 @@
                 <input type="checkbox" id="solArkaCamYok"> Yok
             </div>
 
-            <!-- Sağ Arka Cam -->
             <div class="parca">
                 <label>Sağ Arka Cam:</label>
                 <input type="checkbox" id="sagArkaCamEzik"> Ezik
@@ -86,7 +82,6 @@
                 <input type="checkbox" id="sagArkaCamYok"> Yok
             </div>
 
-            <!-- Kaput -->
             <div class="parca">
                 <label>Kaput:</label>
                 <input type="checkbox" id="kaputEzik"> Ezik
@@ -97,7 +92,6 @@
                 <input type="checkbox" id="kaputYok"> Yok
             </div>
 
-            <!-- Tavan -->
             <div class="parca">
                 <label>Tavan:</label>
                 <input type="checkbox" id="tavanEzik"> Ezik
@@ -108,7 +102,6 @@
                 <input type="checkbox" id="tavanYok"> Yok
             </div>
 
-            <!-- Sol Ön Kapı -->
             <div class="parca">
                 <label>Sol Ön Kapı:</label>
                 <input type="checkbox" id="solOnKapiEzik"> Ezik
@@ -119,7 +112,6 @@
                 <input type="checkbox" id="solOnKapiYok"> Yok
             </div>
 
-            <!-- Sağ Ön Kapı -->
             <div class="parca">
                 <label>Sağ Ön Kapı:</label>
                 <input type="checkbox" id="sagOnKapiEzik"> Ezik
@@ -130,7 +122,6 @@
                 <input type="checkbox" id="sagOnKapiYok"> Yok
             </div>
 
-            <!-- Sol Arka Kapı -->
             <div class="parca">
                 <label>Sol Arka Kapı:</label>
                 <input type="checkbox" id="solArkaKapiEzik"> Ezik
@@ -141,7 +132,6 @@
                 <input type="checkbox" id="solArkaKapiYok"> Yok
             </div>
 
-            <!-- Sağ Arka Kapı -->
             <div class="parca">
                 <label>Sağ Arka Kapı:</label>
                 <input type="checkbox" id="sagArkaKapiEzik"> Ezik
@@ -152,7 +142,6 @@
                 <input type="checkbox" id="sagArkaKapiYok"> Yok
             </div>
 
-            <!-- Bagaj Kapağı -->
             <div class="parca">
                 <label>Bagaj Kapağı:</label>
                 <input type="checkbox" id="bagajKapagiEzik"> Ezik
@@ -163,7 +152,6 @@
                 <input type="checkbox" id="bagajKapagiYok"> Yok
             </div>
 
-            <!-- Tekerlekler -->
             <div class="parca">
                 <label>Tekerlekler:</label>
                 <input type="checkbox" id="tekerleklerEzik"> Ezik
@@ -186,11 +174,9 @@
 
         let kaydedilenAraclar = [];
 
-        // Formu gönderdiğinde çalışacak
         aracKayitFormu.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            // Form bilgilerini al
             const kesifTarihi = document.getElementById('kesifTarihi').value;
             const dosyaNo = document.getElementById('dosyaNo').value;
             const plaka = document.getElementById('plaka').value;
@@ -198,8 +184,8 @@
             const motorNo = document.getElementById('motorNo').value;
             const otoparkGirisTarihi = document.getElementById('otoparkGirisTarihi').value;
 
-            // Araç durumunu al
-            // Araç durumunu al
+
+            
 const solOnCamDurumu = getParcaDurumu('solOnCam');
 const sagOnCamDurumu = getParcaDurumu('sagOnCam');
 const solArkaCamDurumu = getParcaDurumu('solArkaCam');
@@ -213,7 +199,7 @@ const sagArkaKapiDurumu = getParcaDurumu('sagArkaKapi');
 const bagajKapagiDurumu = getParcaDurumu('bagajKapagi');
 const tekerleklerDurumu = getParcaDurumu('tekerlekler');
 
-            // Aracı kaydet
+
             const yeniArac = {
                 kesifTarihi,
                 dosyaNo,
@@ -242,7 +228,7 @@ const tekerleklerDurumu = getParcaDurumu('tekerlekler');
             kaydedilenAraclariGoster();
         });
 
-        // Belirli bir parça için durumları döndüren fonksiyon
+
         function getParcaDurumu(parcaId) {
             const durumlar = [];
             if (document.getElementById(`${parcaId}Ezik`).checked) durumlar.push('Ezik');
@@ -254,7 +240,7 @@ const tekerleklerDurumu = getParcaDurumu('tekerlekler');
             return durumlar.join(', ');
         }
 
-        // Kaydedilen araçları gösterme fonksiyonu
+
         function kaydedilenAraclariGoster() {
             kaydedilenAraclarListesi.innerHTML = '';
 
@@ -291,7 +277,7 @@ const tekerleklerDurumu = getParcaDurumu('tekerlekler');
             });
         }
 
-        // Araç detayını göster/gizle
+
         function aracDetayiniGoster(index) {
             const detayDiv = document.getElementById(`aracDetay${index}`);
             if (detayDiv.style.display === 'none') {
@@ -301,13 +287,13 @@ const tekerleklerDurumu = getParcaDurumu('tekerlekler');
             }
         }
 
-        // Araç silme fonksiyonu
+
         function araciSil(index) {
             kaydedilenAraclar.splice(index, 1);
             kaydedilenAraclariGoster();
         }
 
-        // Formu temizle
+
         function formuTemizle() {
             aracKayitFormu.reset();
         }
